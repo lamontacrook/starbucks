@@ -16,7 +16,7 @@
   --link-hover-color: #136ff6;
   --background-color: #fff;
   --overlay-background-color: #eee;
-  --highlight-background-color: #ccc;
+  --highlight-background-color: #29403B;
   --text-color: #000;
 
   /* fonts */
@@ -39,6 +39,9 @@
 
   /* nav height */
   --nav-height: 64px;
+  --callout-height: 67px;
+  --icon-width: 224px;
+  --nav-justification: center;
 
 }
 
