@@ -12,7 +12,6 @@ main .hero {
   position: relative;
   padding: 0;
   min-height: fit-content(100.06%);
-  height: max-content;
   width: 100vw;
   height: auto;
 }
@@ -56,6 +55,7 @@ main .hero .bottom-callout, main .hero .top-callout {
 
 main .hero .bottom-callout {
   display: table;
+  margin-top: -10px;
 }
 
 main .hero .top-callout {
@@ -63,8 +63,16 @@ main .hero .top-callout {
   top: var(--nav-height);
 }
 
+main .hero .top-callout > div {
+  max-width: 1200px;
+  color: white;
+  margin: auto;
+  line-height: var(--nav-height);
+}
+
 main .hero .bottom-callout > div {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+  color: white;
 }

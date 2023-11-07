@@ -1,18 +1,10 @@
 export default function decorate(block) {
   const anchor = block.querySelector('a');
-  // anchor.remove();
-  console.log(block);
-  console.log(block.querySelectorAll('div'));
-
   const [topCallout, videoDiv, bottomCallout] = [...block.children];
-  console.log(topCallout);
-  console.log(videoDiv);
-  console.log(bottomCallout);
 
   bottomCallout.classList.add('bottom-callout');
   topCallout.classList.add('top-callout');
   videoDiv.classList.add('video');
-  
   videoDiv.innerHTML = `<video loop muted playsInline>
       <source data-src="${anchor?.href}" type="video/mp4" />
     </video>`;
