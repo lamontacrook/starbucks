@@ -20,8 +20,10 @@
   --text-color: #000;
 
   /* fonts */
-  --body-font-family: stb-regular, sans-serif;
-  --heading-font-family: var(--body-font-family);
+  --body-font-family: stb-light, sans-serif;
+  --body-font-family-bold: stb-bold, sans-serif;
+  --body-font-din: din-condensed, sans-serif;
+  --heading-font-family: stb-regular, sans-serif;
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
@@ -92,20 +94,31 @@ h4, h5, h6 {
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
-h1 { 
-  font-size: var(--heading-font-size-l);
-  color: var(--highlight-background-color);
-
-}
-h2 { font-size: var(--heading-font-size-xl) }
-h3 { font-size: var(--heading-font-size-l) }
 h4 { font-size: var(--heading-font-size-m) }
 h5 { font-size: var(--heading-font-size-s) }
 h6 { font-size: var(--heading-font-size-xs) }
 
+h1 { 
+  font-size: var(--heading-font-size-l);
+  color: var(--highlight-background-color);
+}
+
+h2 {
+  font-size: var(heading-font-size-xxl);
+  font-family: var(--body-font-din);
+  line-height: 57.6px;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: var(--body-font-family-bold);
+  line-height: 24px;
+}
+
 p, dl, ol, ul, pre, blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
+  font-size: var(--body-font-size-s);
 }
 
 hr {
@@ -237,6 +250,10 @@ main img {
 
 main .section {
   padding: 64px 16px;
+}
+
+main .section.center {
+  text-align: center;
 }
 
 @media (min-width: 600px) {
