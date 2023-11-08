@@ -1,9 +1,38 @@
+.columns {
+  background-color: aliceblue;
+}
+
 .columns > div {
   display: flex;
   flex-direction: column;
 }
 
-.columns img {
+.columns picture > img {
+  width: 100%;
+  border-bottom: var(--highlight-background-color);
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+}
+
+.columns p {
+  position: relative;
+}
+
+.columns p a.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+}
+
+.columns > div > .columns-img-col img {
+  display: block;
+}
+
+.columns p a.play-button img {
+  height: 100%;
   width: 100%;
 }
 
@@ -15,19 +44,22 @@
   order: 0;
 }
 
-.columns > div > .columns-img-col img {
-  display: block;
-}
-
 @media (min-width: 900px) {
   .columns > div {
-    align-items: center;
+    align-items: stretch;
     flex-direction: unset;
     gap: 32px;
+    margin: 0 47px;
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
   }
+
+  .columns img {
+    width: 522px;
+    height: 268px;
+  }
+
 }

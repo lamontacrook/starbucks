@@ -148,7 +148,7 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: var(--icon-width);
   height: auto;
 }
 
@@ -225,6 +225,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
+    justify-content: var(--nav-justification);
     gap: 2em;
     margin: 0;
     font-size: var(--body-font-size-xs);
@@ -248,11 +249,13 @@ header nav .nav-sections ul > li > ul > li {
     width: 200px;
     margin-top: 12px;
     padding: 1em;
-    background-color: var(--highlight-background-color);
+    border: .7px solid var(--highlight-background-color);
+    background-color: white;
+    border-radius: 4px;
     white-space: initial;
   }
 
-  header nav .nav-sections > ul > li > ul::before {
+  /* header nav .nav-sections > ul > li > ul::before {
     content: '';
     position: absolute;
     top: -8px;
@@ -262,7 +265,7 @@ header nav .nav-sections ul > li > ul > li {
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 8px solid var(--highlight-background-color);
-  }
+  } */
 
   header nav .nav-sections > ul > li > ul > li {
     padding: 8px 0;

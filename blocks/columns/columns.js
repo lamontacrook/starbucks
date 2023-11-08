@@ -12,6 +12,8 @@ export default function decorate(block) {
           // picture is only content in column
           picWrapper.classList.add('columns-img-col');
         }
+
+        pic.parentElement.innerHTML += '<a href="" class="play-button"><img data-icon-name="play-button" src="/icons/play-button.svg" loading="lazy"></a>';
       }
     });
   });
