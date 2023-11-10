@@ -63,6 +63,37 @@ async function loadEager(doc) {
   }
 }
 
+export function addVideoLightbox(element, video) {
+  const modal = document.querySelector('.modal');
+  const lightbox = document.createElement('div');
+  const frame = document.createElement('iframe');
+  frame.setAttribute('src', video);
+  lightbox.classList.add('lightbox');
+  lightbox.innerHTML = `<a data-v-1dc53196="" href="javascript:void(0)" class="close"><svg data-v-1dc53196="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="float-right close svg-inline--fa fa-times fa-lg"><path data-v-1dc53196="" fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" class=""></path></svg></a>`; // eslint-disable-line quotes
+  lightbox.append(frame);
+
+  lightbox.querySelector('.close').addEventListener('click', ((e) => {
+    e.preventDefault();
+    lightbox.remove();
+    modal.classList.add('hidden');
+  }));
+
+  modal.classList.remove('hidden');
+  element.append(lightbox);
+}
+
+function addModal() {
+  const modal = document.createElement('div');
+  modal.classList.add('modal');
+  modal.classList.add('hidden');
+  document.querySelector('main').append(modal);
+}
+
+export function removeVideoLightbox(element) {
+  const lightbox = element.querySelector('.lightbox');
+  lightbox.remove();
+}
+
 /**
  * Loads everything that doesn't need to be delayed.
  * @param {Element} doc The container element
@@ -84,6 +115,8 @@ async function loadLazy(doc) {
   sampleRUM('lazy');
   sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
   sampleRUM.observe(main.querySelectorAll('picture > img'));
+
+  addModal();
 }
 
 /**
