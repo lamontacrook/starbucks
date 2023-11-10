@@ -1,5 +1,16 @@
 .columns {
-  background-color: aliceblue;
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.dark {
+  background-color: var(--highlight-background-color);
+  height: 407px;
+}
+
+.columns.dark {
+  background-color: var(--highlight-background-color);
+  color: white;
 }
 
 .columns > div {
@@ -60,6 +71,16 @@
   .columns img {
     width: 522px;
     height: 268px;
+  }
+
+  .columns .icon {
+    width: unset;
+    height: unset;
+  }
+
+  .columns.dark img {
+    height: 100%;
+    width: 100%;
   }
 
 }
