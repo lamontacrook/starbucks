@@ -44,7 +44,6 @@ export default function decorate(element) {
         if (element.classList.contains('video')) {
           pic.parentElement.innerHTML += '<a href="" class="play-button"><img data-icon-name="play-button" src="/icons/play-button.svg" loading="lazy"></a>';
           const anchor = element.querySelector('.play-button');
-          console.log(anchor);
           anchor.addEventListener('click', ((e) => {
             e.preventDefault();
             addVideoLightbox(element, videoSrc);
