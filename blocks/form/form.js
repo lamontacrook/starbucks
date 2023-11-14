@@ -408,7 +408,6 @@ function loadUEScripts() {
 }
 
 export default async function decorate(block) {
-  console.log(block);
   const formLink = block.querySelector('a[href$=".json"]');
   if (formLink) {
     loadUEScripts();

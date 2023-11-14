@@ -91,7 +91,7 @@
     width: 100%;
   }
 
-  .section.dark.teaser-container {
+  .section.dark.teaser-container, .section.teaser-container {
     max-height: 407px;
     margin: 64px 0;
     padding: unset;

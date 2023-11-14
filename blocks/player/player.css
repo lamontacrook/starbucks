@@ -15,3 +15,11 @@ main .player iframe {
   height: 100%;
   border: 0;
 }
+
+main .s7videoplayer:has(video) {
+  background-color: white;
+}
+
+.s7videoviewer .s7controlbar {
+  opacity: unset;
+}
