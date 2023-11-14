@@ -1,4 +1,4 @@
-.columns {
+.teaser {
   background-color: var(--background-color);
   position: relative;
 }
@@ -8,28 +8,28 @@
   height: 407px;
 }
 
-.columns.dark {
+.teaser.dark {
   background-color: var(--highlight-background-color);
   color: white;
 }
 
-.columns > div {
+.teaser > div {
   display: flex;
   flex-direction: column;
 }
 
-.columns picture > img {
+.teaser picture > img {
   width: 100%;
   border-bottom: var(--highlight-background-color);
   border-bottom-width: 5px;
   border-bottom-style: solid;
 }
 
-.columns p {
+.teaser p {
   position: relative;
 }
 
-.columns p a.play-button {
+.teaser p a.play-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -38,49 +38,64 @@
   height: 52px;
 }
 
-.columns > div > .columns-img-col img {
+.teaser > div > .columns-img-col img {
   display: block;
 }
 
-.columns p a.play-button img {
+.teaser p a.play-button img {
   height: 100%;
   width: 100%;
 }
 
-.columns > div > div {
+.teaser > div > div {
   order: 1;
 }
 
-.columns > div > .columns-img-col {
+.teaser > div > .columns-img-col {
   order: 0;
 }
 
 @media (min-width: 900px) {
-  .columns > div {
+  .teaser > div {
     align-items: stretch;
     flex-direction: unset;
     gap: 32px;
     margin: 0 47px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  .columns > div > div {
+  .teaser > div > div {
     flex: 1;
     order: unset;
   }
 
-  .columns img {
+  .teaser img {
     width: 522px;
     height: 268px;
   }
 
-  .columns .icon {
+  .teaser .icon {
     width: unset;
     height: unset;
   }
 
-  .columns.dark img {
+  .teaser .icon img {
+    width: 432px;
+    padding: 0 15px;
+  }
+
+  .teaser.dark img {
     height: 100%;
     width: 100%;
   }
+
+  .section.dark.teaser-container {
+    max-height: 407px;
+    margin: 64px 0;
+    padding: unset;
+  }
+  
 
 }

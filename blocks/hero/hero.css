@@ -50,6 +50,7 @@ main .hero .bottom-callout {
 main .hero .top-callout {
   position: fixed;
   top: var(--nav-height);
+  z-index: 5;
 }
 
 main .hero .top-callout > div {
