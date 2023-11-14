@@ -86,9 +86,38 @@ main .form > div {
   gap: var(--form-field-vert-gap);
 }
 
+main .form > div > div {
+    width: 480px;
+}
+
+main .form > div > div:last-child {
+    width: 60%;
+    padding: 48px 64px;
+}
+
+main .form .field-wrapper {
+    width: 100%;
+}
+
+main .form-submit-wrapper{
+    width: var(--form-submit-width);
+    text-align: center;
+}
+
+main .form .button {
+    background-color: var(--highlight-background-color);
+    border-radius: 30px;
+}
+
+main .form > div > div img {
+    height: 100%;
+    object-fit: cover;
+}
+
 main .form form {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    flex-direction: column;
     gap: var(--form-field-vert-gap) var(--form-field-horz-gap);
     align-items: start;
 }
@@ -218,10 +247,6 @@ main .form button {
 
 main .form button:hover {
     background: var(--form-button-background-hover-color);
-}
-
-main .form-submit-wrapper{
-    width: var(--form-submit-width);
 }
 
 main .form input:disabled,
