@@ -3,12 +3,8 @@
   position: relative;
 }
 
-.dark {
-  background-color: var(--highlight-background-color);
-  height: 407px;
-}
-
 .teaser.dark {
+  height: 407px;
   background-color: var(--highlight-background-color);
   color: white;
 }
@@ -53,6 +49,7 @@
 
 .teaser > div > .columns-img-col {
   order: 0;
+  margin: auto;
 }
 
 @media (min-width: 900px) {
@@ -67,8 +64,11 @@
   }
 
   .teaser > div > div {
-    flex: 1;
     order: unset;
+  }
+
+  .teaser > div > div:first-child {
+    width: 50%;
   }
 
   .teaser img {
@@ -92,9 +92,10 @@
   }
 
   .section.dark.teaser-container, .section.teaser-container {
-    max-height: 407px;
+    /* max-height: 407px; */
     margin: 64px 0;
     padding: unset;
+    background-color: var(--highlight-background-color);
   }
   
 
