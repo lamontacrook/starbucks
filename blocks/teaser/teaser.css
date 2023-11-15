@@ -1,10 +1,10 @@
 .teaser {
   background-color: var(--background-color);
   position: relative;
+  height: 407px;
 }
 
 .teaser.dark {
-  height: 407px;
   background-color: var(--highlight-background-color);
   color: white;
 }
@@ -92,11 +92,11 @@
   }
 
   .section.dark.teaser-container, .section.teaser-container {
-    /* max-height: 407px; */
     margin: 64px 0;
     padding: unset;
+  }
+
+  .section.teaser-container:has(.dark) {
     background-color: var(--highlight-background-color);
   }
-  
-
 }
